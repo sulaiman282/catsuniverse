@@ -62,8 +62,6 @@ body::-webkit-scrollbar-thumb {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 93%);
 }
 
-
-
 /* bounce the image */
 
 .bounce {
@@ -152,7 +150,6 @@ body::-webkit-scrollbar-thumb {
 
 /* -------------------------------------------- */
 
-
 /* Preloader Animation */
 
 .split-half1 {
@@ -210,50 +207,50 @@ body::-webkit-scrollbar-thumb {
   background-size: cover;
 }
 
-
 @keyframes slide {
   0% {
-    margin-left: -20px; 
+    margin-left: -20px;
   }
   50% {
-    margin-left: 20px; 
+    margin-left: 20px;
   }
   100% {
-    margin-left: -20px; 
+    margin-left: -20px;
   }
 }
 
 .image-animation {
-  animation: slide 5s linear infinite; 
+  animation: slide 5s linear infinite;
 }
 .card {
   transform-style: preserve-3d;
- }
- 
- .face {
-   display: block;
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   border-radius: 0.8rem;
-   background-size: cover;
-   background-position: center center;
-   backface-visibility: hidden;
-   transition: transform 0.5s ease-in-out;
- }
- 
- .face--back {
- 
-   transform: rotateY(180deg);
- }
- 
- .card:hover .face--front {
-   transform: rotateY(-180deg);
- }
- 
- .card:hover .face--back {
-   transform: rotateY(0deg);
- }
- 
+}
+
+.face {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.8rem;
+  background-size: cover;
+  background-position: center center;
+  backface-visibility: hidden;
+  transition: transform 0.5s ease-in-out;
+}
+
+.face--back {
+  transform: rotateY(180deg);
+}
+
+.card:hover .face--front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .face--back {
+  transform: rotateY(0deg);
+}
+.EZDrawer .EZDrawer__container {
+  background: transparent !important;
+}

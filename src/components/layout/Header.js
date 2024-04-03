@@ -110,7 +110,7 @@ console.log("activeSection",activeSection)
     <nav
       className={`${
         scrollHeight > 200
-          ? "bg-white border-b border-gray-50 shadow-md"
+          ? "backdrop-blur-md backdrop-brightness-75  shadow-md"
           : " bg-transparent"
       } duration-300 fixed w-full top-0 z-40 left-1/2 -translate-x-1/2 `}
     >
@@ -142,7 +142,7 @@ console.log("activeSection",activeSection)
             className={`${
               activeSection == "hero"
                 ? "bg-primary shadow px-3  py-1 rounded-full text-white font-bold "
-                : "hover:bg-primary hover:text-white hover:px-3 hover:py-1 hover:rounded-full duration-300"
+                : "hover:bg-primary text-white hover:text-white hover:px-3 hover:py-1 hover:rounded-full duration-300"
             }  duration-300 lg:text-[16px]   ${
               scrollHeight > 200
                 ? activeSection == "hero"
@@ -159,7 +159,7 @@ console.log("activeSection",activeSection)
             className={`${
               activeSection == "about"
                 ? "bg-primary shadow px-3  py-1 rounded-full text-white font-bold "
-                : "hover:bg-primary hover:text-white hover:px-3 hover:py-1 hover:rounded-full duration-300"
+                : "hover:bg-primary text-white hover:text-white hover:px-3 hover:py-1 hover:rounded-full duration-300"
             }  duration-300 lg:text-[16px]   ${
               scrollHeight > 200
                 ? activeSection == "about"
@@ -176,7 +176,7 @@ console.log("activeSection",activeSection)
             className={`${
               activeSection == "gallery"
                 ? "bg-primary shadow px-3  py-1 rounded-full text-white font-bold "
-                : "hover:bg-primary hover:text-white hover:px-3 hover:py-1 hover:rounded-full duration-300"
+                : "hover:bg-primary text-white hover:text-white hover:px-3 hover:py-1 hover:rounded-full duration-300"
             }  duration-300 lg:text-[16px]   ${
               scrollHeight > 200
                 ? activeSection == "gallery"
@@ -219,10 +219,10 @@ console.log("activeSection",activeSection)
         open={isOpen}
         onClose={toggleDrawer}
         direction="right"
-        className=""
+        className="bg-transparent"
         lockBackgroundScroll
       >
-        <div className="h-full bg-gray-200 ">
+        <div className="h-full backdrop-blur-md backdrop-brightness-75  ">
           <IconButton
             onClick={toggleDrawer}
             className=" bg-secondary/10 hover:bg-secondary/30 duration-300 md:hidden m-5"
@@ -243,7 +243,7 @@ console.log("activeSection",activeSection)
               className={`${
                 activeSection == "hero"
                   ? "bg-primary px-3  py-1 rounded-full text-white font-bold "
-                  : "hover:bg-primary hover:text-white hover:px-3 hover:py-1 hover:rounded-full duration-300"
+                  : "hover:bg-primary text-white hover:text-white hover:px-3 hover:py-1 hover:rounded-full duration-300"
               }  duration-300 lg:text-[16px]  `}
             >
               Home
@@ -257,7 +257,7 @@ console.log("activeSection",activeSection)
               className={`${
                 activeSection == "about"
                   ? "bg-primary px-3 py-1 rounded-full text-white font-bold "
-                  : "hover:bg-primary hover:text-white hover:px-3 hover:py-1 hover:rounded-full duration-300"
+                  : "hover:bg-primary text-white hover:text-white hover:px-3 hover:py-1 hover:rounded-full duration-300"
               }  duration-300 lg:text-[16px]  `}
             >
               About
@@ -270,7 +270,7 @@ console.log("activeSection",activeSection)
               className={`${
                 activeSection == "gallery"
                   ? "bg-primary px-3 py-1 rounded-full text-white font-bold "
-                  : "hover:bg-primary hover:text-white hover:px-3 hover:py-1 hover:rounded-full duration-300"
+                  : "hover:bg-primary text-white hover:text-white hover:px-3 hover:py-1 hover:rounded-full duration-300"
               }  duration-300 lg:text-[16px]  `}
             >
              Gallery
