@@ -12,7 +12,7 @@ export default function About() {
             <p className="text-white lg:text-[60px] md:text-4xl text-3xl font-bold font-legion">
               Cats Universe
             </p>
-            <p className=" text-white lg:text-4xl md:text-3xl text-2xl mt-3">
+            <p className=" text-white lg:text-4xl md:text-3xl text-2xl mt-6 lg:mt-10">
               In a hidden corner of the universe lies the Cathole, where cats
               from across galaxies gather under moonlit skies. Here, tales of
               cosmic adventures are shared, and friendships are forged. One day,
