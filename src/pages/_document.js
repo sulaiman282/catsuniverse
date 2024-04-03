@@ -11,12 +11,12 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
 
-        <meta name="title" content="Cathole" />
+        <meta name="title" content="Cats Universe" />
         <meta
           name="description"
           content="Welcome to Cats Universe."
         />
-        <meta name="keywords" content="Cats_universe, cathole" />
+        <meta name="keywords" content="Cats_universe, Cats Universe" />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
