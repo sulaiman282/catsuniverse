@@ -1,36 +1,32 @@
 import { useEffect, useState } from 'react';
 
 function useWindowSize() {
-  // Initialize state with undefined width/height so server and client renders match
-  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-  if (typeof window !== 'undefined') {
-    const [windowSize, setWindowSize] = useState({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
-    useEffect(() => {
-      // Handler to call on window resize
-      function handleResize() {
-        // Set window width/height to state
-        setWindowSize({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      }
-      // Add event listener
-      window.addEventListener('resize', handleResize);
-      // Call handler right away so state gets updated with initial window size
-      handleResize();
-      // Remove event listener on cleanup
-      return () => window.removeEventListener('resize', handleResize);
-    }, []); // Empty array ensures that effect is only run on mount
-    return windowSize;
-  } else {
-    return {
-      width: 0,
-      height: 0,
-    };
-  }
+  const isClient = typeof window === 'object';
+
+  const [windowSize, setWindowSize] = useState({
+    width: isClient ? window.innerWidth : 0,
+    height: isClient ? window.innerHeight : 0,
+  });
+
+  useEffect(() => {
+    if (!isClient) {
+      return; // If it's not in the client-side environment, do nothing
+    }
+
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); // Empty array ensures that effect is only run on mount
+
+  return windowSize;
 }
 
 export default useWindowSize;
