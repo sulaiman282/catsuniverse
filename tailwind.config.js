@@ -7,6 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Open Sans", "sans-serif"],
+        display: ["Playfair Display", "serif"],
+      },
+      colors: {
+        primary: "#0006b1",
+      },
+      boxShadow: {
+        "3xl": "0px 8px 25px rgba(0, 0, 0, 0.07)",
+        "4xl": "0px 8px 25px rgba(0, 0, 0, 0.04);",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
