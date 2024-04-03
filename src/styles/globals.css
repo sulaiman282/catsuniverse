@@ -185,21 +185,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.split-half3 {
-  animation: splitSlideAnimation2 2s forwards;
-}
 
-@keyframes splitSlideAnimation2 {
-  0% {
-    opacity: 100;
-  }
-  50% {
-    opacity: 50;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 
 .triangle {
   clip-path: polygon(0 0, 0% 100%, 100% 0);
